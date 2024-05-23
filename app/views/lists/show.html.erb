@@ -1,0 +1,15 @@
+<h1>Cette liste</h1>
+<p>Nom de la liste</p>
+
+<h2><%= @list.name %></h2>
+
+<ul>
+  <% @list.bookmarks.each do |book| %>
+  <p>Comment bookmark = <%= book.comment %></p>
+    <%= image_tag book.movie.poster_url %>
+    <li>
+      <%= book.movie.title %>
+    </li>
+    <p> <%= book.movie.overview %> ||  <%= book.movie.rating %></p>
+  <% end %>
+</ul>
